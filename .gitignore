@@ -6,4 +6,3 @@ Thumbs.db
 .vscode/
 package.json
 *.csv
-*.json
