@@ -55,7 +55,7 @@ REPOS = [
     "nprapps/app-template",
     "TimeMagazineLabs/babynames",
     "guardian/frontend",
-    "dukechronicle/chronline,
+    "dukechronicle/chronline",
     "BloombergMedia/whatiscode",
     "aduggin/accessibility-fails",
     "Heydon/REVENGE.CSS",
