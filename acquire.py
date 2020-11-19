@@ -23,7 +23,7 @@ REPOS = [
     "gocodeup/codeup-setup-script",
     "gocodeup/movies-application",
     "torvalds/linux",
-    "beetbox/beets"
+    "beetbox/beets",
     "scottschiller/SoundManager2",
     "CreateJS/SoundJS",
     "musescore/MuseScore",
@@ -46,8 +46,6 @@ REPOS = [
     "twbs/ratchet",
     "atlemo/SubtlePatterns",
     "fivethirtyeight/data",
-    "fivethirtyeight/data/tree/master/bob-ross",
-    "fivethirtyeight/data/tree/master/buster-posey-mvp",
     "datadesk/notebooks",
     "newsapps/beeswithmachineguns",
     "voxmedia/meme",
@@ -138,11 +136,11 @@ REPOS = [
 
 headers = {"Authorization": f"token {github_token}", "User-Agent": github_username}
 
+
 if headers["Authorization"] == "token " or headers["User-Agent"] == "":
     raise Exception(
         "You need to follow the instructions marked TODO in this script before trying to use it"
     )
-
 
 def github_api_request(url: str) -> Union[List, Dict]:
     response = requests.get(url, headers=headers)
@@ -153,7 +151,6 @@ def github_api_request(url: str) -> Union[List, Dict]:
             f"response: {json.dumps(response_data)}"
         )
     return response_data
-
 
 def get_repo_language(repo: str) -> str:
     url = f"https://api.github.com/repos/{repo}"
