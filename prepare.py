@@ -18,6 +18,8 @@ def basic_clean(string):
     string = unicodedata.normalize('NFKD', string).encode('ascii', 'ignore').decode('utf-8', 'ignore')
     # remove anything that is not a through z, a number, a single quote, or whitespace
     string = re.sub(r"[^a-z0-9'\s]", ' ', string)
+    # remove single numbers and single apostrophes
+    string = re.sub(r"\s\d\s|\s'\s", ' ', string)
     return string
 
 def tokenize(string):
