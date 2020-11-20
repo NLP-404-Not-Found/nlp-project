@@ -41,7 +41,7 @@ def word_cloud_2(html_words, ruby_words, c_plus_plus_words):
     axs[1].imshow(ruby_cloud)
     axs[2].imshow(c_plus_plus_cloud)
 
-    axs[0].set_title('HTML Words')
+    axs[0].set_title('HTML')
     axs[1].set_title('Ruby')
     axs[2].set_title('C++')
 
