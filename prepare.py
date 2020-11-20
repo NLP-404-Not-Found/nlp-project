@@ -93,7 +93,7 @@ def remove_stopwords(string, extra_words=[], exclude_words=[]):
 
     return string_without_stopwords
 
-def prep_data(df, column, extra_words=['github', 'project', 'name', 'library'], exclude_words=[]):
+def prep_data(df, column, extra_words=['github', 'project', 'name', 'library', '00s'], exclude_words=[]):
     '''
     This function take in a df and the string name for a text column with 
     option to pass lists for extra_words and exclude_words and
