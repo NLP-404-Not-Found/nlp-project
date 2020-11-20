@@ -125,7 +125,7 @@ def prep_data(df, column, extra_words=['github', 'project', 'name', 'library'], 
     df = df[~df['language'].isin(low_language_count)]
 
     # Removes null values from the dataframe
-    df = df.dropna()
+    df = df.dropna().reset_index()
 
     return df[['repo', 'language', column, 'stemmed', 'lemmatized', 'clean', 'stopwords_removed', 'doc_length', 'words']]
 
