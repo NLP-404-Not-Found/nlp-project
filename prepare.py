@@ -105,7 +105,8 @@ def prep_data(df, column, extra_words=[], exclude_words=[]):
                             .apply(remove_stopwords, 
                                    extra_words=extra_words, 
                                    exclude_words=exclude_words)\
-                            .apply(lemmatize)
+                            .apply(lemmatize)\
+                            .apply(basic_clean)
     
     df['stemmed'] = df[column].apply(basic_clean).apply(stem)
     
