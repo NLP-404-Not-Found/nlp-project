@@ -116,7 +116,7 @@ def prep_data(df, column, extra_words=[], exclude_words=[]):
     df['doc_length'] = doc_length
     
     df['stopwords_removed'] = df.apply(lambda row: len(row['lemmatized'].split()) - len(row['clean'].split()), axis=1)
-    
-    return df[['repo', 'language', column, 'stemmed', 'lemmatized', 'clean', 'stopwords_removed', 'doc_length']]
+
+    return df[['repo', 'language', column, 'stemmed', 'lemmatized', 'clean', 'stopwords_removed', 'doc_length', 'words']]
 
 
