@@ -100,6 +100,9 @@ def prep_data(df, column, extra_words=['github', 'project', 'name', 'library'], 
     returns a df with the text article title, original text, stemmed text,
     lemmatized text, cleaned, tokenized, & lemmatized text with stopwords removed.
     '''
+    # Removes null values from the dataframe
+    df = df.dropna().reset_index()
+
     df['clean'] = df[column].apply(basic_clean)\
                             .apply(tokenize)\
                             .apply(remove_stopwords, 
