@@ -117,6 +117,13 @@ def prep_data(df, column, extra_words=[], exclude_words=[]):
     
     df['stopwords_removed'] = df.apply(lambda row: len(row['lemmatized'].split()) - len(row['clean'].split()), axis=1)
 
+    # Identifies which languages are only represented a single time and removes them from the dataframe
+    low_language_count = list(df.language.value_counts()[df.language.value_counts() < 2].index)
+    df = df[~df['language'].isin(low_language_count)]
+
+    # Removes null values from the dataframe
+    df = df.dropna()
+
     return df[['repo', 'language', column, 'stemmed', 'lemmatized', 'clean', 'stopwords_removed', 'doc_length', 'words']]
 
 
