@@ -199,7 +199,29 @@ REPOS = [
     "laurentlb/Ctrl-Alt-Test",
     "memo/ofxKinect-demos",
     "lluisgomez/text_extraction",
-    "macmade/FaceDetect"
+    "macmade/FaceDetect",
+    "clayallsopp/routable-android",
+    "jclouds/legacy-jclouds",
+    "StanKocken/EfficientAdapter",
+    "florent37/Carpaccio",
+    "chiuki/friendspell",
+    "applidium/HeaderListView",
+    "androidessence/PinchZoomTextView",
+    "dessalines/flowchat",
+    "Kenber/DoubleStickyHeadersList",
+    "timroes/SwipeToDismissUndoList",
+    "tyczj/MapNavigator",
+    "uPhyca/GAlette",
+    "mallethugo/RealParallaxAndroid",
+    "konifar/android-strings-search-plugin",
+    "JPMoresmau/eclipsefp",
+    "bulletnoid/StaggeredGridView",
+    "liaohuqiu/SimpleHashSet",
+    "andyxialm/CutoLoadingView",
+    "rjsvieira/morphos",
+    "tuesda/SubmitDemo",
+    "avenwu/support",
+    "cuub/sugared-list-animations"
 ]
 
 headers = {"Authorization": f"token {github_token}", "User-Agent": github_username}
