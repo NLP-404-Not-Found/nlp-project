@@ -10,7 +10,7 @@ plt.rc('font', size=15)
 from wordcloud import WordCloud
 
 def word_cloud_1(all_words, javascript_words, python_words):
-    all_cloud = WordCloud(background_color='white', colormap='Greys', height=1000, width=400, margin=2).generate(all_words)
+    all_cloud = WordCloud(background_color='white', colormap='cividis', height=1000, width=400, margin=2).generate(all_words)
     javascript_cloud = WordCloud(background_color='white', colormap='cool', height=600, width=800, margin=2).generate(javascript_words)
     python_cloud = WordCloud(background_color='white', colormap='winter', height=600, width=800, margin=2).generate(python_words)
 
