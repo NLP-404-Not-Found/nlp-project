@@ -103,16 +103,7 @@ def prep_data(df, column, extra_words=['github', 'project', 'name', 'library', '
     # Removes null values from the dataframe
     df = df.dropna().reset_index()
 
-    df['clean'] = df[column].apply(basic_clean)\
-                            .apply(tokenize)\
-                            .apply(remove_stopwords, 
-                                   extra_words=extra_words, 
-                                   exclude_words=exclude_words)\
-                            .apply(lemmatize)\
-                            .apply(remove_stopwords, 
-                                   extra_words=extra_words, 
-                                   exclude_words=exclude_words)\                                
-                            .apply(basic_clean)
+    df['clean'] = df[column].apply(basic_clean).apply(tokenize).apply(remove_stopwords, extra_words=extra_words, exclude_words=exclude_words).apply(lemmatize).apply(remove_stopwords, extra_words=extra_words, exclude_words=exclude_words).apply(basic_clean)
     
     df['stemmed'] = df[column].apply(basic_clean).apply(stem)
     
