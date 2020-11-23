@@ -109,7 +109,7 @@ def prep_data(df, column, extra_words=['github', 'project', 'name', 'library', '
     
     df['lemmatized'] = df[column].apply(basic_clean).apply(lemmatize)
     
-    words = [re.sub(r'([^a-z0-9\s]|\s.\s)', '', doc).split() for doc in df.clean]
+    words = [re.sub(r'([^a-z0-9\s])', '', doc).split() for doc in df.clean]
     df = pd.concat([df, pd.DataFrame({'words': words})], axis = 1)
     
     doc_length = [len(wordlist) for wordlist in df.words]
