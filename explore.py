@@ -2,6 +2,8 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from scipy import stats
+from numpy.random import choice
 
 # default viz size settings
 plt.rc('figure', figsize=(9, 7))
@@ -145,7 +147,7 @@ def idf(words_df, train):
     # Return the dataframe
     return idf_df
 
-def t_test_loop(target, alpha = 0.05):    
+def t_test_loop(target, train, alpha = 0.05):    
     '''
     This function is dependent on a globally defined dataframe named 'train' that contains a 'language' column containing strings
     The target is the header for the column being investigated. The column being investigated must be a numeric type.
