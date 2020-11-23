@@ -73,10 +73,10 @@ Scikit-Learn
 Anyone can reproduce this project. All we ask is that you credit us if you use our work as part of your own project.
 1. Clone this repo.
 2. Acquire the data:
-  * a. <a href="https://github.com/settings/tokens">Go here</a> and generate a personal access token. You do ***not*** need select any scopes, i.e. leave all the checkboxes unchecked.
-  * b. Save it in your env.py file under the variable ```github_token```.
-  * c. Add your github username to your env.py file under the variable ```github_username```.
-  * d. Add more repositories to the `REPOS` list below if you so choose.
+    * a. <a href="https://github.com/settings/tokens">Go here</a> and generate a personal access token. You do ***not*** need select any scopes, i.e. leave all the checkboxes unchecked.
+    * b. Save it in your env.py file under the variable ```github_token```.
+    * c. Add your github username to your env.py file under the variable ```github_username```.
+    * d. Add more repositories to the `REPOS` list below if you so choose.
 3. Add any extra stop-words in the prepare.py file.
 4. Run the code in the ```nlp_model``` Jupyter Notebook.
 
