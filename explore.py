@@ -11,8 +11,8 @@ from wordcloud import WordCloud
 
 def word_cloud_1(all_words, javascript_words, python_words):
     all_cloud = WordCloud(background_color='white', colormap='cividis', height=1000, width=400, margin=2).generate(all_words)
-    javascript_cloud = WordCloud(background_color='white', colormap='cool', height=600, width=800, margin=2).generate(javascript_words)
-    python_cloud = WordCloud(background_color='white', colormap='winter', height=600, width=800, margin=2).generate(python_words)
+    javascript_cloud = WordCloud(background_color='white', colormap='winter', height=600, width=800, margin=2).generate(javascript_words)
+    python_cloud = WordCloud(background_color='white', colormap='cool', height=600, width=800, margin=2).generate(python_words)
 
     plt.figure(figsize=(10, 8))
     axs = [plt.axes([0, 0, .6, 1]), plt.axes([.5, .5, .45, .45]), plt.axes([.5, 0, .45, .45])]
@@ -51,3 +51,35 @@ def word_cloud_2(html_words, ruby_words, c_plus_plus_words, java_words):
     for ax in axs: ax.axis('off')
 
     plt.show
+
+def js_v_python_props(word_counts):
+    # figure out the percentage of javascript vs python
+    (word_counts
+    .assign(p_javascript=word_counts.javascript / word_counts['all'],
+            p_python=word_counts.python / word_counts['all'])
+    .sort_values(by='all')
+    [['p_javascript', 'p_python']]
+    .tail(30)
+    .sort_values('p_python')
+    .plot.barh(stacked=True))
+
+    plt.title('Proportion of Javascript vs Python for the 30 most common words')
+
+    plt.show
+
+def most_common_words_props(word_counts):
+    # figure out the percentage of language
+    (word_counts
+    .assign(p_javascript=word_counts.javascript / word_counts['all'],
+            p_python=word_counts.python / word_counts['all'],
+            p_ruby=word_counts.ruby / word_counts['all'],
+            p_html=word_counts.html / word_counts['all'],
+            p_c_plus_plus=word_counts.c_plus_plus / word_counts['all'],
+            p_java=word_counts.java / word_counts['all'])
+    .sort_values(by='all')
+    [['p_javascript', 'p_python', 'p_ruby', 'p_html', 'p_c_plus_plus', 'p_java']]
+    .tail(20)
+    .sort_values('p_python')
+    .plot.barh(stacked=True))
+
+    plt.title('Proportion of Language for the 20 most common words')
