@@ -84,11 +84,13 @@ def most_common_words_props(word_counts):
 
     plt.title('Proportion of Language for the 20 most common words')
 
-def idf(words_df):
+def idf(words_df, train):
     '''
     Takes in a dataframe made of a single column where each row is a single word and 
     returns a dataframe containing the top 10 most frequent words,
     the number of documents each word shows up in, and the idf value for each word
+    Also requires the train dataframe to be passed in as an argument in order to identify the
+    total number of documents
     '''
     
     # Creates a dictionary of the top ten words and their number of counts
@@ -227,5 +229,5 @@ def baseline_language_model(train, num_observations):
 
     # Creates an array of predictions based on weighted random chance    
     baseline_predictions = choice(possible_languages, num_observations, p=probabilities)
-    
+
     return baseline_predictions
