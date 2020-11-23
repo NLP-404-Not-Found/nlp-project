@@ -71,4 +71,5 @@ Python version 3.85
 Your permissions for users when reproducing your project.
 
 ## Creators
-The names of all contributors for the project with contact information.
+<a href="https://github.com/KwameTaylor">Kwame V. Taylor</a>, Data Scientist
+<a href="https://github.com/adam-gomez">Adam Gomez</a>, Data Scientist
