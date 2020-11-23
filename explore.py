@@ -83,3 +83,22 @@ def most_common_words_props(word_counts):
     .plot.barh(stacked=True))
 
     plt.title('Proportion of Language for the 20 most common words')
+
+def get_bigrams(words):
+    top_10_bigrams = (pd.Series(nltk.ngrams(words, 2))
+                      .value_counts()
+                      .head(10))
+
+    return top_10_bigrams
+
+def viz_bigrams(top_10_bigrams):
+    top_10_bigrams.sort_values().plot.barh(color='pink', width=.9, figsize=(10, 6))
+
+    plt.title('10 Most frequently occuring bigrams')
+    plt.ylabel('Bigram')
+    plt.xlabel('# Occurances')
+
+    # make the labels pretty
+    ticks, _ = plt.yticks()
+    labels = top_10_bigrams.reset_index()['index'].apply(lambda t: t[0] + ' ' + t[1])
+    _ = plt.yticks(ticks, labels)
