@@ -9,10 +9,11 @@ GitHub automatically shows the percentages of what coding languages are used in 
 ### Deliverables
  * A well-documented Jupyter Notebook that contains our analysis
  * A Google Slides presentation suitable for a general audience that summarizes our findings and includes visualizations
-
+<!--
 ### Acknowledgments
 Where you got the data, inspiration, etc. 
 > My first inspiration for writing Readme files from Maggie Giust's Heart Failure repository [here](https://github.com/magsgiust/heart_failure).
+-->
 
 ## Data Dictionary
 
@@ -27,7 +28,7 @@ Where you got the data, inspiration, etc.
 | stopwords_removed | The number of stopwords that were removed from the clean text.                                                                                                                                                                 | int64           |
 | doc_length        | How long a repo's README is.                                                                                                                                                                                                   | int64           |
 | words             | The clean text in array form.                                                                                                                                                                                                  | object          |
-
+<!--
 ## Initial Thoughts & Hypotheses
 ### Thoughts
 First ideas about project while initially exploring the dataset.
@@ -67,6 +68,7 @@ Can use exandable text for large amounts of text.
   
 ### Conclusions
 Key insights from project.
+-->
 
 ### Tools & Requirements
 * Python v3.85 (including packages WordCloud, NLTK, and Scikit-Learn)
