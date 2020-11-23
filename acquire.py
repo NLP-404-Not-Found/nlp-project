@@ -803,7 +803,6 @@ REPOS = [
     'DongjunLee/vae-tensorflow',
     'onm2000/AEVB',
     'asahi417/ConditionalVariationalAutoEncoder',
-    'pauli-space/VAEs',
     'choo8/tensorflow-CVAE',
     'LordAlucard90/Variational-AutoEncoder-For-Novelty-Detection',
     'quinkennedy/ofxGeneticAlg',

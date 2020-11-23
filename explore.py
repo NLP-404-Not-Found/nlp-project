@@ -91,7 +91,7 @@ def most_common_words_props(word_counts):
     plt.title('Proportion of Language for the 20 most common words')
 
 def get_bigrams(words):
-    top_10_bigrams = (pd.Series(nltk.ngrams(words, 2))
+    top_10_bigrams = pd.Series(list(nltk.ngrams(words.split(), 2))).value_counts().head(10)
                       .value_counts()
                       .head(10))
 
