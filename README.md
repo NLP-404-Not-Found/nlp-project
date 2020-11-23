@@ -1,7 +1,7 @@
-# Project Title
+# Predicting the Language of GitHub Repositories by README using NLP
 ## About the Project
 ### Goals
-What is the purpose of the project? This project is guidance for users creating an informative readme file for any project. This can be used directly or as inspiration. Tailor it to the needs of the project. Sections can be added or removed.
+Using natural language processing, web scraping, and classification, we aim to create a machine learning model to predict the primary programming language of a given repository on GitHub, based on the contents of its README.
 
 ### Background
 Domain knowledge relevant to project. According to [WiseGeek.com](https://www.wisegeek.com/what-is-a-readme-file.htm),
