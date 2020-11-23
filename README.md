@@ -4,10 +4,11 @@
 Using natural language processing, web scraping, and classification, we aim to create a machine learning model to predict the primary programming language of a given repository on GitHub, based on the contents of its README.
 
 ### Background
-GitHub automatically shows the percentages of what coding languages are used in the files of a repository. In this project, we are seeking to label and predict on only the ***primary*** language of each repository. These lanugages include Java, Python, Javascript, Ruby, HTML, and C++.
+GitHub automatically shows the percentages of what coding languages are used in the files of a repository. In this project, we are seeking to label and predict on only the ***primary*** language of each repository. These languages include Java, Python, Javascript, Ruby, HTML, and C++.
 
 ### Deliverables
-The requirements for sharing your project. If possible, include links, such as the link to a presentation.
+ * A well-documented Jupyter Notebook that contains our analysis
+ * A Google Slides presentation suitable for a general audience that summarizes our findings and includes visualizations
 
 ### Acknowledgments
 Where you got the data, inspiration, etc. 
