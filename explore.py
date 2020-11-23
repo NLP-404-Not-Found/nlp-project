@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 from scipy import stats
 from numpy.random import choice
 
+import re
+import unicodedata
+import nltk
+
 # default viz size settings
 plt.rc('figure', figsize=(9, 7))
 plt.rc('font', size=15)
@@ -104,6 +108,7 @@ def viz_bigrams(top_10_bigrams):
     ticks, _ = plt.yticks()
     labels = top_10_bigrams.reset_index()['index'].apply(lambda t: t[0] + ' ' + t[1])
     _ = plt.yticks(ticks, labels)
+
 def idf(words_df, train):
     '''
     Takes in a dataframe made of a single column where each row is a single word and 
