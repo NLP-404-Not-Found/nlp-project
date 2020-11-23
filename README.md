@@ -64,11 +64,21 @@ Key insights from project.
 
 
 ### Tools & Requirements
-<-- What tools did you use and what version were they? -->
-Python version 3.85
+Python v3.85
+WordCloud
+NLTK
+Scikit-Learn
 
-## Reproduction
-Anyone can reproduce this project.
+## License & Reproduction
+Anyone can reproduce this project. All we ask is that you credit us if you use our work as part of your own project.
+1. Clone this repo.
+2. Acquire the data:
+  * a. <a href="https://github.com/settings/tokens">Go here</a> and generate a personal access token. You do ***not*** need select any scopes, i.e. leave all the checkboxes unchecked.
+  * b. Save it in your env.py file under the variable ```github_token```.
+  * c. Add your github username to your env.py file under the variable ```github_username```.
+  * d. Add more repositories to the `REPOS` list below if you so choose.
+3. Add any extra stop-words in the prepare.py file.
+4. Run the code in the ```nlp_model``` Jupyter Notebook.
 
 ## Creators
 <a href="https://github.com/KwameTaylor">Kwame V. Taylor</a>, Data Scientist<br>
