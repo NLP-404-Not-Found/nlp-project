@@ -64,12 +64,12 @@ Key insights from project.
 
 
 ### Tools & Requirements
-What tools did you use and what version were they?  
+<-- What tools did you use and what version were they? -->
 Python version 3.85
 
-## License
-Your permissions for users when reproducing your project.
+## Reproduction
+Anyone can reproduce this project.
 
 ## Creators
-<a href="https://github.com/KwameTaylor">Kwame V. Taylor</a>, Data Scientist
+<a href="https://github.com/KwameTaylor">Kwame V. Taylor</a>, Data Scientist<br>
 <a href="https://github.com/adam-gomez">Adam Gomez</a>, Data Scientist
